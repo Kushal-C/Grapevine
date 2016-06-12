@@ -16,14 +16,16 @@ public class Main extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ListView listView = (ListView)findViewById(R.id.listView);
 
-
         populateReviewsList();
+
+        ReviewAdapter reviewAdapter = new ReviewAdapter(this,myReviews);
+        listView.setAdapter(reviewAdapter);
     }
 
     public void populateReviewsList(){
-        myReviews.add(new Review("Bad","Sample review 1 , BLAH BLAH BLAH", "5 mins ago", 4));
-        myReviews.add(new Review("Terrible","Sample review 2 , BLAH BLAH BLAH", "9 mins ago", 5));
-        myReviews.add(new Review("Good","Sample review 3 , BLAH BLAH BLAH", "2 days ago", 3));
+        myReviews.add(new Review("Sample review 1" , "BLAH BLAH BLAH", 4));
+        myReviews.add(new Review("Sample review 2" , "BLAH BLAH BLAH", 5));
+        myReviews.add(new Review("Sample review 3" , "BLAH BLAH BLAH", 3));
 
     }
 }

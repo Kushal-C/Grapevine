@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sample Title"
+        android:id="@+id/titleTextView"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginTop="21dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/contentTextView"
+        android:layout_alignStart="@+id/contentTextView"/>
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Anthony Castello is a fucking tool never work with him in the industry. Screw this non paying piece of shit."
+        android:id="@+id/contentTextView"
+        android:textSize="12sp"
+        android:layout_below="@+id/imageIconView"
+        android:layout_toRightOf="@+id/imageIconView"
+        android:layout_toEndOf="@+id/imageIconView"
+        android:layout_marginLeft="39dp"
+        android:layout_marginStart="39dp"
+        android:paddingBottom="20dp"/>
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:rating="4"
+        android:id="@+id/starRatingBar"
+        android:stepSize=".5"
+        android:scaleX="0.3"
+        android:scaleY=".3"
+        android:layout_alignTop="@+id/titleTextView"
+        android:layout_alignLeft="@+id/imageIconView"
+        android:layout_alignStart="@+id/imageIconView"
+        android:layout_marginLeft="5dp"/>
+
+    <ImageView android:layout_width="50dp"
+          android:layout_height="50dp"
+          android:background="@drawable/circle"
+          android:id="@+id/imageIconView"
+          android:layout_alignTop="@+id/titleTextView"
+          android:layout_alignParentLeft="true"
+          android:layout_alignParentStart="true"
+          android:layout_marginLeft="28dp"
+          android:layout_marginStart="28dp"/>
+</RelativeLayout>

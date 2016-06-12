@@ -32,5 +32,6 @@
         android:id="@+id/textView2"
         android:layout_alignBottom="@+id/imageView"
         android:layout_alignLeft="@+id/textView"
-        android:layout_alignStart="@+id/textView"/>
+        android:layout_alignStart="@+id/textView"
+        />
 </RelativeLayout>

@@ -5,46 +5,46 @@ package me.kushalc.grapevine;
  */
 public class Review {
     public String header;
-    private String review;
-    private String dateAndTime;
+    private String content;
     private int rating;
 
     public Review(){
 
     }
 
-    public Review(String header, String review, String dateAndTime, int rating){
-        this.review = review;
-        this.dateAndTime = dateAndTime;
+    public Review(String header, String review, int rating){
+        this.content = review;
+        this.header = header;
+       // this.dateAndTime = dateAndTime;
         this.rating = rating;
     }
 
     public String getReview() {
-        return review;
+        return content;
     }
 
     public int getRating() {
         return rating;
     }
 
-    public String getDateAndTime() {
-        return dateAndTime;
-    }
+   // public String getDateAndTime() {
+  //      return dateAndTime;
+ //   }
 
     public String getHeader() {
         return header;
     }
 
-    public void setDateAndTime(String dateAndTime) {
-        this.dateAndTime = dateAndTime;
-    }
+   // public void setDateAndTime(String dateAndTime) {
+       // this.dateAndTime = dateAndTime;
+   // }
 
     public void setRating(int rating) {
         this.rating = rating;
     }
 
     public void setReview(String review) {
-        this.review = review;
+        this.content = review;
     }
 
     public void setHeader(String header) {
