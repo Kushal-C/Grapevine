@@ -4,10 +4,85 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#EEEEEE"
     tools:context="me.kushalc.grapevine.ReviewActivity">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="#4A4A4A"
+        android:id="@+id/relativeLayout">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/imageView2"
+            android:layout_marginTop="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kushal Cuttari"
+            android:id="@+id/nameTextView"
+            android:textStyle="bold"
+            android:textColor="#F2F1EF"
+            android:layout_below="@+id/imageView2"
+            android:layout_centerHorizontal="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Frat House Master"
+            android:id="@+id/workTextView"
+            android:textSize="12sp"
+            android:textColor="#F2F1EF"
+            android:layout_below="@+id/nameTextView"
+            android:layout_alignRight="@+id/averageRatingTextView"
+            android:layout_alignEnd="@+id/averageRatingTextView"/>
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleX=".3"
+            android:scaleY=".3"
+            android:id="@+id/profileAverageRating"
+            android:numStars="5"
+            android:rating="4"
+            android:layout_marginLeft="54dp"
+            android:layout_marginStart="54dp"
+            android:layout_below="@+id/nameTextView"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/averageRatingTextView"
+            android:text="4.5/5"
+            android:textSize="12sp"
+            android:textColor="#F2F1EF"
+            android:layout_below="@+id/workTextView"
+            android:layout_alignRight="@+id/imageView2"
+            android:layout_alignEnd="@+id/imageView2"
+            android:layout_marginTop="5dp"/>
+
+    </RelativeLayout>
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView2"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/relativeLayout"
+        android:background="#f2f1ef"/>
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Write a Review"
+        android:id="@+id/addReviewButton"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"/>
 </RelativeLayout>
