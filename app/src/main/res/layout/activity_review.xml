@@ -18,10 +18,11 @@
         <ImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:id="@+id/imageView2"
+            android:id="@+id/profileImageView"
             android:layout_marginTop="30dp"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"/>
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/circle"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -30,18 +31,18 @@
             android:id="@+id/nameTextView"
             android:textStyle="bold"
             android:textColor="#F2F1EF"
-            android:layout_below="@+id/imageView2"
+            android:layout_below="@+id/profileImageView"
             android:layout_centerHorizontal="true"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Frat House Master"
-            android:id="@+id/workTextView"
+            android:id="@+id/descTextView"
             android:textSize="12sp"
             android:textColor="#F2F1EF"
             android:layout_below="@+id/nameTextView"
             android:layout_alignRight="@+id/averageRatingTextView"
-            android:layout_alignEnd="@+id/averageRatingTextView"/>
+            />
         <RatingBar
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -50,11 +51,11 @@
             android:id="@+id/profileAverageRating"
             android:numStars="5"
             android:rating="4"
-            android:layout_marginLeft="54dp"
-            android:layout_marginStart="54dp"
-            android:layout_below="@+id/nameTextView"
+            android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"/>
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="56dp"
+            android:layout_marginStart="56dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -62,17 +63,16 @@
             android:text="4.5/5"
             android:textSize="12sp"
             android:textColor="#F2F1EF"
-            android:layout_below="@+id/workTextView"
-            android:layout_alignRight="@+id/imageView2"
-            android:layout_alignEnd="@+id/imageView2"
-            android:layout_marginTop="5dp"/>
+            android:layout_below="@+id/descTextView"
+            android:layout_alignRight="@+id/profileImageView"
+            android:layout_alignEnd="@+id/profileImageView"/>
 
     </RelativeLayout>
 
     <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/listView2"
+        android:id="@+id/profileReviewsList"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/relativeLayout"
         android:background="#f2f1ef"/>
@@ -82,6 +82,7 @@
         android:layout_height="wrap_content"
         android:text="Write a Review"
         android:id="@+id/addReviewButton"
+        android:onClick="writeReview"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="10dp"/>

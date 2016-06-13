@@ -11,6 +11,7 @@ public class Review implements Parcelable {
     private String content;
     private int rating;
 
+
     public Review(){
 
     }
