@@ -33,8 +33,8 @@ public class Main extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-    }
 
+    }
 
     public void populateReviewsList(){
         myReviews.add(new Review("Review for Mark Anthony" , "Mark Anthony is a fucking tool, never work with this non paying piece of shit.", 1));
