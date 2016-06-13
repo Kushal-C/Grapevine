@@ -39,6 +39,7 @@ public class ReviewActivity extends AppCompatActivity {
         ratingBar.setRating(2);
 
         populateListView();
+        mReviewList.add(0,review);
 
         ListView listView = (ListView)findViewById(R.id.profileReviewsList);
         ReviewAdapter reviewAdapter = new ReviewAdapter(this,mReviewList);
@@ -47,7 +48,8 @@ public class ReviewActivity extends AppCompatActivity {
     }
     // Functionality for lower Button
     public void writeReview(View view){
-
+        Intent intent = new Intent(this,WriteReview.class);
+        //startActivity(intent);
     }
 
     public void populateListView(){
