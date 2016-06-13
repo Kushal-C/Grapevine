@@ -4,13 +4,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.RatingBar;
-import android.widget.TextView;
 
 public class WriteReview extends AppCompatActivity {
 
-    private TextView title;
-    private TextView content;
+    private EditText title;
+    private EditText content;
     private RatingBar rating;
 
     @Override
@@ -18,10 +18,10 @@ public class WriteReview extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_write_review);
 
-        title = (TextView)findViewById(R.id.writeReviewTitle);
-        content = (TextView)findViewById(R.id.writeReviewContent);
+        title = (EditText) findViewById(R.id.writeReviewTitle);
+        content = (EditText) findViewById(R.id.writeReviewContent);
 
-        rating = (RatingBar)findViewById(R.id.starRatingBar);
+        rating = (RatingBar)findViewById(R.id.writeReviewRating);
 
 
     }

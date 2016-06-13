@@ -49,7 +49,7 @@ public class ReviewActivity extends AppCompatActivity {
     // Functionality for lower Button
     public void writeReview(View view){
         Intent intent = new Intent(this,WriteReview.class);
-        //startActivity(intent);
+        startActivity(intent);
     }
 
     public void populateListView(){

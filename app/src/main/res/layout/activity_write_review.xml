@@ -7,11 +7,12 @@
     android:orientation="vertical"
     tools:context="me.kushalc.grapevine.WriteReview">
 
-    <TextView
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="Title the Review..."
         android:id="@+id/writeReviewTitle"
+        android:background="@android:color/transparent"
         android:padding="30dp"/>
 
     <View
@@ -45,9 +46,10 @@
         android:layout_height="2dp"
         android:background="@android:color/darker_gray"/>
 
-    <TextView
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
         android:id="@+id/writeReviewContent"
         android:hint="Write a Review(300 char max)..."
         android:paddingBottom="90dp"
@@ -61,10 +63,10 @@
 
     <Space
         android:layout_width="1dp"
-        android:layout_height="250dp"/>
+        android:layout_height="200dp"/>
     <Button
         android:layout_width="200dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:text="Submit Review"
         android:background="@drawable/buttonshape"
         android:onClick="sendReview"
