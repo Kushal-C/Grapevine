@@ -2,11 +2,13 @@ package me.kushalc.grapevine;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
+import android.widget.ListView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
@@ -15,7 +17,7 @@ import java.util.List;
 /**
  * Created by Kushal on 6/12/16.
  */
-public class ReviewAdapter extends BaseAdapter implements View.OnClickListener {
+public class ReviewAdapter extends BaseAdapter implements ListView.OnItemClickListener {
 
     private Activity activity;
     private List<Review> data;
@@ -50,9 +52,10 @@ public class ReviewAdapter extends BaseAdapter implements View.OnClickListener {
         return row;
     }
 
+
     @Override
-    public void onClick(View v) {
-        Intent intent = new Intent();
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        Log.i("Position",Integer.toString(position));
 
     }
 

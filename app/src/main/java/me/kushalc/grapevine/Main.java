@@ -1,7 +1,10 @@
 package me.kushalc.grapevine;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -14,13 +17,24 @@ public class Main extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ListView listView = (ListView)findViewById(R.id.listView);
+        final ListView listView = (ListView)findViewById(R.id.listView);
 
         populateReviewsList();
 
         ReviewAdapter reviewAdapter = new ReviewAdapter(this,myReviews);
         listView.setAdapter(reviewAdapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                //Log.i("Position Clicked",Integer.toString(position));
+                Intent intent = new Intent(view.getContext(),ReviewActivity.class);
+                intent.putExtra("Review",myReviews.get(position));
+                //Log.i("Tag",myReviews.get(position).getHeader());
+                startActivity(intent);
+            }
+        });
     }
+
 
     public void populateReviewsList(){
         myReviews.add(new Review("Review for Mark Anthony" , "Mark Anthony is a fucking tool, never work with this non paying piece of shit.", 1));
