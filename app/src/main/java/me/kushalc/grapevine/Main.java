@@ -23,7 +23,7 @@ public class Main extends AppCompatActivity {
     }
 
     public void populateReviewsList(){
-        myReviews.add(new Review("Sample review 1" , "BLAH BLAH BLAH", 4));
+        myReviews.add(new Review("Review for Mark Anthony" , "Mark Anthony is a fucking tool, never work with this non paying piece of shit.", 1));
         myReviews.add(new Review("Sample review 2" , "BLAH BLAH BLAH", 5));
         myReviews.add(new Review("Sample review 3" , "BLAH BLAH BLAH", 3));
 
