@@ -9,7 +9,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="220dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:background="#00B16A"
@@ -22,6 +22,7 @@
             android:layout_marginTop="30dp"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
+            android:src="@drawable/pic"
             android:background="@drawable/circle"/>
 
         <TextView
@@ -31,8 +32,9 @@
             android:id="@+id/nameTextView"
             android:textStyle="bold"
             android:textColor="#F2F1EF"
-            android:layout_below="@+id/profileImageView"
-            android:layout_centerHorizontal="true"/>
+            android:layout_above="@+id/descTextView"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="5dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -40,9 +42,9 @@
             android:id="@+id/descTextView"
             android:textSize="12sp"
             android:textColor="#F2F1EF"
-            android:layout_below="@+id/nameTextView"
+            android:layout_alignTop="@+id/profileAverageRating"
             android:layout_alignRight="@+id/averageRatingTextView"
-            />
+            android:layout_alignEnd="@+id/averageRatingTextView"/>
         <RatingBar
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -63,9 +65,10 @@
             android:text="4.5/5"
             android:textSize="12sp"
             android:textColor="#F2F1EF"
-            android:layout_below="@+id/descTextView"
+            android:layout_alignTop="@+id/profileAverageRating"
             android:layout_alignRight="@+id/profileImageView"
-            android:layout_alignEnd="@+id/profileImageView"/>
+            android:layout_alignEnd="@+id/profileImageView"
+            android:layout_marginTop="21dp"/>
 
     </RelativeLayout>
 

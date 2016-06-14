@@ -9,22 +9,21 @@
         android:supportsRtl="true"
         android:theme="@style/GrapevineTheme">
         <activity android:name=".Main">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
         </activity>
         <activity android:name=".ReviewActivity">
         </activity>
         <activity android:name=".WriteReview">
         </activity>
-        <activity android:name=".Login">
+        <activity
+            android:name=".Login"
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+        </activity>
+        <activity android:name=".SearchActivity">
         </activity>
     </application>
 
