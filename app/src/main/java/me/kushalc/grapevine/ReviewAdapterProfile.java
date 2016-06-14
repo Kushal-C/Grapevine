@@ -17,14 +17,14 @@ import java.util.List;
 /**
  * Created by Kushal on 6/12/16.
  */
-public class ReviewAdapter extends BaseAdapter implements ListView.OnItemClickListener {
+public class ReviewAdapterProfile extends BaseAdapter implements ListView.OnItemClickListener {
 
     private Activity activity;
     private List<Review> data;
     private static LayoutInflater inflater=null;
 
 
-    public ReviewAdapter(Activity a, List d){
+    public ReviewAdapterProfile(Activity a, List d){
         this.activity= a;
         this.data = d;
         //Used to call an external xml file, in this case expandable_list_view.xml
@@ -45,7 +45,7 @@ public class ReviewAdapter extends BaseAdapter implements ListView.OnItemClickLi
         RatingBar ratingBar = (RatingBar)row.findViewById(R.id.starRatingBar);
 
         content.setText(data.get(position).getReview());
-        header.setText("Review for " + data.get(position).getReviewee());
+        header.setText(data.get(position).getHeader());
         ratingBar.setRating(data.get(position).getRating());
         // Add Custom ImageView at a later time to randomize the icons that pop up when people review
 

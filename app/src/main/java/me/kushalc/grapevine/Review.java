@@ -7,20 +7,31 @@ import android.os.Parcelable;
  * Created by Kushal on 6/11/16.
  */
 public class Review implements Parcelable {
+    public String reviewee;
     public String header;
     private String content;
     private int rating;
+
 
 
     public Review(){
 
     }
 
-    public Review(String header, String review, int rating){
+    public Review(String reviewee, String header, String review, int rating){
+        this.reviewee = reviewee;
         this.content = review;
         this.header = header;
         // this.dateAndTime = dateAndTime;
         this.rating = rating;
+    }
+
+    public String getReviewee() {
+        return reviewee;
+    }
+
+    public void setReviewee(String reviewee) {
+        this.reviewee = reviewee;
     }
 
     public String getReview() {
@@ -56,6 +67,7 @@ public class Review implements Parcelable {
     }
 
     protected Review(Parcel in) {
+        reviewee = in.readString();
         header = in.readString();
         content = in.readString();
         rating = in.readInt();
@@ -68,6 +80,7 @@ public class Review implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(reviewee);
         dest.writeString(header);
         dest.writeString(content);
         dest.writeInt(rating);

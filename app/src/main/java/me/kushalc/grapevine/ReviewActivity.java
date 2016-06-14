@@ -32,17 +32,18 @@ public class ReviewActivity extends AppCompatActivity {
 
         RatingBar ratingBar = (RatingBar)findViewById(R.id.profileAverageRating);
 
-        name.setText(review.getHeader());
-        desc.setText("Latin American Musician");
-        avgRating.setText("2.3/5");
+        name.setText(review.getReviewee());
+        desc.setText("Producer & Artist");
+        avgRating.setText(Integer.toString((int) ratingBar.getRating()) + "/5");
 
-        ratingBar.setRating(2);
+        ratingBar.setRating(ratingBar.getRating());
 
         populateListView();
-        mReviewList.add(0,review);
+
+        mReviewList.add(2,review);
 
         ListView listView = (ListView)findViewById(R.id.profileReviewsList);
-        ReviewAdapter reviewAdapter = new ReviewAdapter(this,mReviewList);
+        ReviewAdapterProfile reviewAdapter = new ReviewAdapterProfile(this,mReviewList);
         listView.setAdapter(reviewAdapter);
 
     }
@@ -53,9 +54,11 @@ public class ReviewActivity extends AppCompatActivity {
     }
 
     public void populateListView(){
-        mReviewList.add(new Review("Mark Anthony is terrible" , "Mark Anthony is a fucking tool, never work with this non paying piece of shit.", 1));
-        mReviewList.add(new Review("Not too bad a guy" , "Mark Anthony is not that bad a guy. I never undestood why it was cool to ahte him. He might be demanding at times but I'e never seen him go wrong. Don't judge him too harshly", 4));
-        mReviewList.add(new Review("Mark Anthony is terrible" , "Mark Anthony is a fucking tool, never work with this non paying piece of shit.", 1));
+        mReviewList.add(new Review("Kanye West","Kanye is terrible" , "Kanye is a tool, never work with him. Constantly overbearing and demanding things be done his way. I cannot repeat this enough, DO NOT WORK WITH HIM!", 1));
+        mReviewList.add(new Review("Kanye West", "Not too bad a guy" , "Kanye is not that bad a guy. I never understood why it's cool to hate him on this app. He might be demanding at times but I'e never seen him go wrong. Don't judge him too harshly", 4));
+        mReviewList.add(new Review("Kanye West", "Smooth w/ No Hassle" , "Working with Kanye was a smooth experience. Genuine nice guy, and is true to his word with anything you agree with him on", 5));
+        mReviewList.add(new Review("Kanye West", "Fantastic Working Experience","After working with many different agents in the past, I never thought I’d be able to work with one that doesn’t make me feel like I have to be persistent and patient to be able to properly work and get paid. 10/10 would work with again!", 5));
+
     }
     // Used to connect with Danish's backend
     public class ProfileDownloadTask extends AsyncTask<String, Void, String>{

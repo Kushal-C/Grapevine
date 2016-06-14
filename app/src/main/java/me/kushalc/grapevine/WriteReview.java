@@ -28,7 +28,7 @@ public class WriteReview extends AppCompatActivity {
 
     public void sendReview(View view){
         Intent intent = new Intent(this,ReviewActivity.class);
-        intent.putExtra("Review",new Review(title.getText().toString(),content.getText().toString(), ((int) rating.getRating())));
+        intent.putExtra("Review",new Review("Kanye West", title.getText().toString(),content.getText().toString(), ((int) rating.getRating())));
         startActivity(intent);
     }
 }
