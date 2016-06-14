@@ -82,7 +82,7 @@
         android:layout_above="@+id/addReviewButton"/>
 
     <Button
-        android:layout_width="200dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:text="Write a Review"
         android:id="@+id/addReviewButton"

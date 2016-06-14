@@ -1,8 +1,10 @@
 package me.kushalc.grapevine;
 
 import android.content.Intent;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -21,15 +23,15 @@ public class SearchActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.action_profile:
-                // User chose the "Settings" item, show the app settings UI...
+            case R.id.action_back:
+                Intent intent = new Intent(this, Main.class);
+                startActivity(intent);
                 return true;
 
             case R.id.action_search:
                 // User chose the "Favorite" action, mark the current item
                 // as a favorite...
-                Intent intent = new Intent(this, SearchActivity.class);
-                startActivity(intent);
+
 
                 return true;
 
@@ -44,7 +46,22 @@ public class SearchActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.action_bar, menu);
+        inflater.inflate(R.menu.search_action_bar, menu);
+        MenuItem searchItem = menu.findItem(R.id.action_search);
+        SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                return false;
+            }
+        });
         return true;
     }
 }

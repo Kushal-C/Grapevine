@@ -12,12 +12,13 @@
         android:layout_height="wrap_content"
         android:hint="Title the Review..."
         android:id="@+id/writeReviewTitle"
+        android:textSize="14sp"
         android:background="@android:color/transparent"
         android:padding="30dp"/>
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="2dp"
+        android:layout_height="1dp"
         android:background="@android:color/darker_gray"/>
 
     <LinearLayout
@@ -43,7 +44,7 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="2dp"
+        android:layout_height="1dp"
         android:background="@android:color/darker_gray"/>
 
     <EditText
@@ -52,18 +53,19 @@
         android:background="@android:color/transparent"
         android:id="@+id/writeReviewContent"
         android:hint="Write a Review(300 char max)..."
+        android:textSize="14sp"
         android:paddingBottom="90dp"
         android:paddingLeft="30dp"
         android:paddingTop="30dp"/>
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="2dp"
+        android:layout_height="1dp"
         android:background="@android:color/darker_gray"/>
 
     <Space
         android:layout_width="1dp"
-        android:layout_height="200dp"/>
+        android:layout_height="300dp"/>
     <Button
         android:layout_width="200dp"
         android:layout_height="50dp"
