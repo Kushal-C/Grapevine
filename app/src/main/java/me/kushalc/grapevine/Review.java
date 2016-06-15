@@ -7,9 +7,13 @@ import android.os.Parcelable;
  * Created by Kushal on 6/11/16.
  */
 public class Review implements Parcelable {
+
     public String reviewee;
     public String header;
     private String content;
+
+    private boolean isCompensated;
+
     private int rating;
 
 
@@ -18,10 +22,11 @@ public class Review implements Parcelable {
 
     }
 
-    public Review(String reviewee, String header, String review, int rating){
+    public Review(String reviewee, String header, String review, int rating, boolean paid){
         this.reviewee = reviewee;
         this.content = review;
         this.header = header;
+        this.isCompensated = paid;
         // this.dateAndTime = dateAndTime;
         this.rating = rating;
     }
@@ -66,10 +71,19 @@ public class Review implements Parcelable {
         this.header = header;
     }
 
+    public boolean isCompensated() {
+        return isCompensated;
+    }
+
+    public void setCompensated(boolean compensated) {
+        isCompensated = compensated;
+    }
+
     protected Review(Parcel in) {
         reviewee = in.readString();
         header = in.readString();
         content = in.readString();
+        isCompensated = in.readByte() != 0x00;
         rating = in.readInt();
     }
 
@@ -83,6 +97,7 @@ public class Review implements Parcelable {
         dest.writeString(reviewee);
         dest.writeString(header);
         dest.writeString(content);
+        dest.writeByte((byte) (isCompensated ? 0x01 : 0x00));
         dest.writeInt(rating);
     }
 

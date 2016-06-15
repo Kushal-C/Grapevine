@@ -77,11 +77,11 @@ public class Main extends AppCompatActivity {
     }
 
     public void populateReviewsList(){
-        myReviews.add(new Review("Kanye West", "Great Guy" , "Fantastic Response time. Makes sure you get paid, all in all would recommend as a whole", 5));
-        myReviews.add(new Review("Morghyn Mctague","Terrible to work with" , "She never payed me for our collaboration. She was mostly rude and decided that since she didn’t like what I did, that she wouldn’t pay me for the time and effort I put in. Steer clear and work with someone else!", 2));
-        myReviews.add(new Review("Danish Shaik", "Massive Jerk" , "Was extremely disorganized and never paid on time or in full. Makes a lot of empty promises and can be very pretentious. Would suggest to not work with him, at all!", 2));
-        myReviews.add(new Review("Kushal Cuttari", "Fantastic Writer!","Great writer and great guy! Everything we agreed on he followed through and did the job amazingly! Would definitely recommend hiring someone as creative as him!",5));
-        myReviews.add(new Review("Morghyn Mctague","Does not Deserve Her Reputation!" , "She was extremely impolite and thoughtless. She only paid me in full after almost a month of when we agreed on. If you’re going to work with her, you should have a lot of patience or else it’s impossible", 2));
+        myReviews.add(new Review("Kanye West", "Great Guy" , "Fantastic Response time. Makes sure you get paid, all in all would recommend as a whole", 5, true));
+        myReviews.add(new Review("Morghyn Mctague","Terrible to work with" , "She never paid me for our collaboration. She was mostly rude and decided that since she didn’t like what I did, that she wouldn’t pay me for the time and effort I put in. Steer clear and work with someone else!", 2, false));
+        myReviews.add(new Review("Danish Shaik", "Massive Jerk" , "Was extremely disorganized and never paid on time or in full. Makes a lot of empty promises and can be very pretentious. Would suggest to not work with him, at all!", 2, true));
+        myReviews.add(new Review("Kushal Cuttari", "Fantastic Writer!","Great writer and great guy! Everything we agreed on he followed through and did the job amazingly! Would definitely recommend hiring someone as creative as him!",5, true));
+        myReviews.add(new Review("Morghyn Mctague","Does not Deserve Her Reputation!" , "She was extremely impolite and thoughtless. She only paid me in full after almost a month of when we agreed on. If you’re going to work with her, you should have a lot of patience or else it’s impossible", 2, true));
 
 
     }

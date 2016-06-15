@@ -23,12 +23,12 @@
         android:text="Anthony Castello is a fucking tool never work with him in the industry. Screw this non paying piece of shit."
         android:id="@+id/contentTextView"
         android:textSize="12sp"
-        android:layout_below="@+id/imageIconView"
+        android:layout_marginLeft="38dp"
+        android:layout_marginStart="38dp"
+        android:paddingBottom="20dp"
+        android:layout_below="@+id/starRatingBar"
         android:layout_toRightOf="@+id/imageIconView"
-        android:layout_toEndOf="@+id/imageIconView"
-        android:layout_marginLeft="39dp"
-        android:layout_marginStart="39dp"
-        android:paddingBottom="20dp"/>
+        android:layout_toEndOf="@+id/imageIconView"/>
 
     <RatingBar
         android:layout_width="wrap_content"
@@ -42,7 +42,7 @@
         android:layout_alignTop="@+id/titleTextView"
         android:layout_alignLeft="@+id/imageIconView"
         android:layout_alignStart="@+id/imageIconView"
-        android:layout_marginLeft="5dp"/>
+        android:layout_marginLeft="3dp"/>
 
     <ImageView android:layout_width="50dp"
           android:layout_height="50dp"
@@ -54,4 +54,16 @@
           android:layout_alignParentStart="true"
           android:layout_marginLeft="28dp"
           android:layout_marginStart="28dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Paid"
+        android:id="@+id/paidTextView"
+        android:textColor="#00B16A"
+        android:layout_alignBottom="@+id/imageIconView"
+        android:layout_alignLeft="@+id/titleTextView"
+        android:layout_alignStart="@+id/titleTextView"
+        android:paddingTop="2dp"
+        />
 </RelativeLayout>

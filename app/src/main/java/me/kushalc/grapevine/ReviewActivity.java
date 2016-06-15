@@ -40,7 +40,7 @@ public class ReviewActivity extends AppCompatActivity {
 
         populateListView();
 
-        mReviewList.add(2,review);
+        mReviewList.add(1,review);
 
         ListView listView = (ListView)findViewById(R.id.profileReviewsList);
         ReviewAdapterProfile reviewAdapter = new ReviewAdapterProfile(this,mReviewList);
@@ -54,10 +54,10 @@ public class ReviewActivity extends AppCompatActivity {
     }
 
     public void populateListView(){
-        mReviewList.add(new Review("Kanye West","Kanye is terrible" , "Kanye is a tool, never work with him. Constantly overbearing and demanding things be done his way. I cannot repeat this enough, DO NOT WORK WITH HIM!", 1));
-        mReviewList.add(new Review("Kanye West", "Not too bad a guy" , "Kanye is not that bad a guy. I never understood why it's cool to hate him on this app. He might be demanding at times but I'e never seen him go wrong. Don't judge him too harshly", 4));
-        mReviewList.add(new Review("Kanye West", "Smooth w/ No Hassle" , "Working with Kanye was a smooth experience. Genuine nice guy, and is true to his word with anything you agree with him on", 5));
-        mReviewList.add(new Review("Kanye West", "Fantastic Working Experience","After working with many different agents in the past, I never thought I’d be able to work with one that doesn’t make me feel like I have to be persistent and patient to be able to properly work and get paid. 10/10 would work with again!", 5));
+        mReviewList.add(new Review("Kanye West","Kanye is terrible" , "Kanye is a tool, never work with him. Constantly overbearing and demanding things be done his way. I cannot repeat this enough, DO NOT WORK WITH HIM!", 1, false));
+        mReviewList.add(new Review("Kanye West", "Not too bad a guy" , "Kanye is not that bad a guy. I never understood why it's cool to hate him on this app. He might be demanding at times but I'e never seen him go wrong. Don't judge him too harshly", 4, true));
+        mReviewList.add(new Review("Kanye West", "Smooth w/ No Hassle" , "Working with Kanye was a smooth experience. Genuine nice guy, and is true to his word with anything you agree with him on", 5, true));
+        mReviewList.add(new Review("Kanye West", "Fantastic Working Experience","After working with many different agents in the past, I never thought I’d be able to work with one that doesn’t make me feel like I have to be persistent and patient to be able to properly work and get paid. 10/10 would work with again!", 5, true));
 
     }
     // Used to connect with Danish's backend

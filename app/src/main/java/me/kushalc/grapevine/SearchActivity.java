@@ -66,7 +66,7 @@ public class SearchActivity extends AppCompatActivity {
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-                mReview = new Review(query, "Overall Great Guy","Diligent,Hard Working, Very Responsive. Hugely positive experience working with this guy, would recommend", 5);
+                mReview = new Review(query, "Overall Great Guy","Diligent,Hard Working, Very Responsive. Hugely positive experience working with this guy, would recommend", 5, true);
 
                 mReviews.add("Kanye West");
                 mReviews.add("Kimye West");

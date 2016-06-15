@@ -2,6 +2,7 @@ package me.kushalc.grapevine;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Color;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -42,11 +43,22 @@ public class ReviewAdapterProfile extends BaseAdapter implements ListView.OnItem
 
         TextView header = (TextView)row.findViewById(R.id.titleTextView);
         TextView content = (TextView)row.findViewById(R.id.contentTextView);
+        TextView paidText = (TextView)row.findViewById(R.id.paidTextView);
+
         RatingBar ratingBar = (RatingBar)row.findViewById(R.id.starRatingBar);
 
         content.setText(data.get(position).getReview());
         header.setText(data.get(position).getHeader());
         ratingBar.setRating(data.get(position).getRating());
+
+        if(data.get(position).isCompensated()){
+            paidText.setText("Paid");
+            paidText.setTextColor(Color.parseColor("#00B16A"));
+        }
+        else {
+            paidText.setText("Unpaid");
+            paidText.setTextColor(Color.parseColor("#FF2E48"));
+        }
         // Add Custom ImageView at a later time to randomize the icons that pop up when people review
 
         return row;
